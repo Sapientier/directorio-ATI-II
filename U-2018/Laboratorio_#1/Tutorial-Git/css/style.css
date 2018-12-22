@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Lora|Ranga|Roboto|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Josefin+Sans|Open+Sans+Condensed:300|Teko');
+
+p {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+h1, h2 {
+    font-family: 'Allerta Stencil', sans-serif;
+    color: white;
+    text-align: center;
+    background-color: rgb(30,10,50);
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-bottom: 0px;
+    text-shadow: rgba(175, 67, 246, 0.5) 2px 2px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.cita {
+    font-family: 'Slabo 27px', serif;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: bold;
+    text-indent: 25px;
+    color: rgb(19,6,32);
+    background-color: white;
+    padding: 20px;
+}
+
+.contenido-texto {
+    padding: 45px;
+    background-color: rgba(240, 230, 250, 0.5);
+    text-align: justify;
+    margin-bottom: 30px;
+    text-indent: 25px;
+}
+
+.enlace {
+    color: rgb(97, 0, 162);
+}
+
+.video {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.texto-comando {
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    color: rgb(19,6,32);
+    font-size: 15px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.contenido-imagen {
+    text-align:center;
+    margin-bottom: 25px;
+}
+
+.nota {
+    background-color: white;
+    padding: 20px;
+}
+
+#recapitulacion {
+    text-indent: 0px;
+    color: rgb(19,6,32);
+    background-color: white;
+    padding: 20px;
+    padding-left: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.lista-enlace {
+    position: fixed;
+    margin-top: 10px;
+}
+
+.lista-enlace .sub-enlace {
+    background-color: white;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: rgb(19,6,32);
+    font-size: 14px;
+}
+
+.lista-enlace .sub-enlace:hover {
+    background-color: rgba(240, 230, 250, 0.5);
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 14px;
+}
+
+.list-group-item:first-child {
+    background-color: rgb(30,10,50) !important;
+}
+
+#guia_basica_git {
+    color: white !important;
+    font-size: 16px !important;
+}
+
+div.col-sm-9.contenido-guia {
+    margin-top: 10px;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Guía Básica Git</title>
+  </head>
+  <body>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3">
+            <ul class="list-group lista-enlace">
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="guia_basica_git">Guía Básica de Git</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="primeros_pasos">Primeros pasos con Git</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="crear_repositorio">Crear un repositorio</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="instalar_configurar_git">Instalación y configuración de Git</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="workspace_git">Incorporar Workspace en Git</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="agregar_archivos_git">Agregar archivos a repositorio</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="add_commit_git">Add y commit en Git</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="sincronizar_cambios">Sincronizar cambios</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="conflictos">Conflictos</a></li>
+              <li class="list-group-item sub-enlace"><a href="#" class="enlace" id="evaluacion">Evaluación</a></li>
+            </ul> 
+          </div>
+          <div class="col-sm-9 contenido-guia">
+            <div id="seccion_guia_basica_git">
+                <h2>Guía Básica de Git</h2>
+                <div class="contenido-texto">
+                  <p>Para explicar de manera breve el propósito de esta guía, basta con tomar en cuenta el siguiente escenario:</p>
+                  <p class="cita img-thumbnail"><i>"Maria, Ana y Víctor trabajan desde hace 5 años como desarrolladores en un macro-proyecto web. María vive en Valencia, Ana tuvo que mudarse con su familia a Mérida, y Víctor continúa viviendo en Caracas". </i></p>
+                  <p class="cita img-thumbnail"><i>"Víctor representa al líder del equipo, y tiene como alternativa buscar a nuevos desarrolladores que vivan en las cercanías de Caracas, debido a que Ana no volverá por un tiempo a Caracas, y María presenta una infinidad de problemas con respecto al transporte; pero quién mejor que María, y quién mejor que Ana, que representan aquellas entidades que han contribuido con el desarrollo de dicho proyecto desde su origen, y conocen cada uno de sus requerimientos".</i></p>
+                  <p class="cita img-thumbnail"><i>"Por lo tanto, Víctor se da cuenta de que lo ideal sería que existiera una manera de que cada uno de ellos pueda contribuir con el proyecto rompiendo con la limitación geográfica que se les presenta. En este punto, Víctor encuentra una solución, un Sistema de Control de Versiones, el cual le permite a cada uno de ellos contribuir en un proyecto, independientemente de su geolocalización, realizando una adecuada gestión de los conflictos que podrían surgir al momento de modificar partes del código en común, y llevar a cabo un seguimiento de las modificaciones realizadas a medida que se desarrolla dicho sistema, esa solución es Git".</i></p>
+                </div>
+            </div>
+            
+            <div id="seccion_primeros_pasos">
+              <h2>Primeros pasos con Git</h2>
+              <div class="contenido-texto">
+                <p>El primer paso que se debe hacer para comenzar a utilizar Git es crear una cuenta desde la <a class="enlace" href="https://github.com/" target="_blank"> página oficial de GitHub </a>. </p>
+                <p>Una vez que nos encontremos en la interfaz de la página de inicio, procedemos a realizar el registro, rellenando los campos correspondientes al mismo.</p>
+                <div class="video">
+                  <video width="70%" height="70%" controls>
+                    <source src="recursos/videos/registro-git-hub.webm" type="video/webm">
+                    <p>Tu navegador no soporta HTML5. Puedes ver el video desde <a id="enlace" href="recursos/videos/registro-git-hub.webm">el siguiente enlace</a></p>
+                  </video> 
+                </div>
+                <p>Luego realizamos la verificación de la cuenta, para ello debemos resolver un puzzle, seleccionar el plan que utilizaremos, en este caso será el gratuito, y completar una breve encuesta de la utilidad que le daremos a nuestra cuenta de GitHub.</p>
+                <div class="video">
+                    <video width="70%" height="70%" controls>
+                      <source src="recursos/videos/verificar-cuenta-git-hub.webm" type="video/webm">
+                      <p>Tu navegador no soporta HTML5. Puedes ver el video desde <a class="enlace" href="recursos/videos/verificar-cuenta-git-hub.webm">el siguiente enlace</a></p>
+                    </video> 
+                </div>
+              </div>
+            </div>
+            
+            <div id="seccion_crear_repositorio">
+              <h2>Creando un repositorio</h2>
+              <div class="contenido-texto">
+                <p>Un repositorio es básicamente el directorio que albergará nuestro proyecto, existen varias formas de crear un repositorio, pero lo más tradicional es realizar dicha acción desde nuestro usuario a través de <a class="enlace" href="https://github.com/" target="_blank">la página web</a>.</p>
+                <p>Para crear nuestro primer repositorio se debe seleccionar la opción  <img style="margin-top:-5px;" alt="boton-new-repository" src="recursos/imagenes/boton-new-repository.png"/></p>
+                <p>Como este tutorial se está realizando para fines académicos, aprovecharé la oportunidad para crear un repositorio que contendrá los entregables de cada uno de los estudiantes inscritos en la materia; así como también, los archivos correspondientes a las guías generadas por el preparador de la materia para cada uno de los laboratorios que serán dictados a lo largo del semestre.</p>
+                <div class="video">
+                    <video width="70%" height="70%" controls>
+                      <source src="recursos/videos/crear-nuevo-repositorio-git-hub.webm" type="video/webm">
+                      <p>Tu navegador no soporta HTML5. Puedes ver el video desde <a class="enlace" href="recursos/videos/crear-nuevo-repositorio-git-hub.webm">el siguiente enlace</a></p>
+                    </video> 
+                </div>
+              </div>
+            </div>
+            
+            <div id="seccion_instalar_configurar_git">
+              <h2>Instalación y configuración de Git</h2>
+              <div class="contenido-texto">
+                <p>Bien, ahora que hemos construido nuestro repositorio, ha llegado la hora de usarlo. Existen dos enfoques: utilizar la GUI que provee GitHub a través de su página web, o usar la línea de comandos para conectarse al repositorio y comenzar a subir y sincronizar nuestro contenido.</p>
+                <p>Utilizaremos el segundo enfoque puesto que somos estudiantes de Computación, y tenemos que acostumbrarnos a darle uso a la línea de comandos. El comando para instalar Git es:<p class="texto-comando">~$ sudo apt-get install git</p></p>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="instalar-git-terminator" src="recursos/imagenes/instalar-git-terminator.png"/>
+                </div>
+                <p>En mi caso ya se encuentra instalado, pero la instalación es sencilla, debe ingresar los datos referentes a su cuenta. Una vez realizada la instalación, procederemos a revisar la versión que se dispone, el comando para ello es: </p> 
+                <p class="texto-comando">~$ git --version</p>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-version-terminator" src="recursos/imagenes/git-version-terminal.png"/>
+                </div>
+                <p>Ahora configuraremos nuestra cuenta de Git con los siguientes comandos: </p>
+                <p class="texto-comando">~$ git config --global user.name [username]; git config --global user.email [useremail@email.com]</p>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-config-terminator" src="recursos/imagenes/git-config-terminal.png"/>
+                </div>
+                <p>Hasta este punto, ¿qué tenemos? Sabemos cómo instalar y configurar Git, tenemos el conocimiento base de cómo crear un repositorio. Tomando en cuenta los objetivos cumplidos, ¿qué nos faltaría para completar la meta del presente laboratorio? El elemento vital que no hemos cubierto hasta el momento es el directorio de trabajo, también conocido como workspace, que representa aquel directorio que será incorporado en el repositorio (en la mayoría de los casos el repositorio no es más que el workspace), con la finalidad de realizar modificaciones sobre el mismo desde una perspectiva colaborativa sin afectar los avances del resto de los integrantes del equipo.</p>
+                <p class="nota img-thumbnail"><i><u><b>Nota</b></u>: estamos asumiendo que el repositorio ya existe, y el directorio que tenemos en nuestra máquina local lo queremos incorporar a este repositorio, es importante aclarar este punto, debido a que lo común es construir un workspace e inicializarlo en Git, para así crear automáticamente el repositorio sin la necesidad de subir nuestro workspace a otro repositorio.</i></p>
+              </div>
+            </div>
+          
+            <div id="seccion_workspace_git">
+              <h2>Incorporando Workspace en Git</h2>
+              <div class="contenido-texto">
+                <p>Como se indicó anteriormente, ya el repositorio existe, de hecho, se creó en la sección <a class="enlace" id="ir_seccion_crear_repositorio" href="#">Crear un repositorio</a>, y se definió con el nombre directorio-ATI-II. Por lo tanto, si queremos trabajar dentro de ese repositorio será necesario "clonarlo" para posteriormente utilizarlo.</p>
+                <p>El comando que implementaremos será:</p> <p class="texto-comando">~$ git clone [url]</p> 
+                <p>Aquí podría surgir una duda, ¿cómo saber qué url tiene mi repositorio? Esa información la podemos obtener desde nuestra cuenta de GitHub.</p>
+
+                <div class="video">
+                  <video width="70%" height="70%" controls>
+                    <source src="recursos/videos/obtener-url-repositorio-git-hub.webm" type="video/webm">
+                    <p>Tu navegador no soporta HTML5. Puedes ver el video desde <a class="enlace" href="recursos/videos/obtener-url-repositorio-git-hub.webm">el siguiente enlace</a></p>
+                  </video> 
+                </div>
+
+                <p>Ahora sí será posible clonar el proyecto, ya que tenemos la url del repositorio, y lo haremos a través del comando:.</p>
+                <p class="texto-comando">~$ git clone https://github.com/Vgpollster/directorio-ATI-II.git</p> 
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-clone-terminator" src="recursos/imagenes/git-clone-terminator.png"/>
+                </div>
+                <p>Se genera un warning ya que por los momentos nuestro repositorio se encuentra vacío, pero más adelante veremos cómo agregar los archivos pertenecientes a este laboratorio.</p>
+                <p>Bien, si accedemos al directorio donde realizamos el comando, notaremos que se ha construido un directorio con el nombre del repositorio directorio-ATI-II. Es en ese directorio donde subiremos los entregables y los documentos correspondientes a cada uno de los laboratorios que serán dictados durante el transcurso del semestre.</p>
+                <br>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="directorio-repositorio-clone" src="recursos/imagenes/directorio-repositorio-clone.png"/>
+                </div>
+                <p>En resumen, se podría decir que la principal ventaja de este comando es que básicamente se descarga el repositorio remoto, y se inicializa localmente en su máquina. ¿Qué quiere decir esto? Que si clonas un repositorio, ya puedes trabajar directamente con él de manera local, para luego subir los cambios realizados a ese repositorio remoto alojado en GitHub.</p>
+              </div>
+            </div>
+            
+            <div id="seccion_agregar_archivos_git">
+              <h2>Agregar archivos a repositorio remoto</h2>
+              <div class="contenido-texto">
+                <p>Si recapitulamos todas las acciones que hemos realizado, brevemente podríamos decir que:</p>
+                
+                <ol id="recapitulacion">
+                  <li>Creamos nuestra cuenta en GitHub</li>
+                  <li>Creamos un repositorio, cuyo propósito será subir los archivos relacionados con la materia</li>
+                  <li>Configuramos Git a través de la línea de comandos</li>
+                  <li>Realizamos la operación clone de dicho repositorio, y ahora tenemos una copia local en nuestra máquina</li>
+                  <li>¿Qué sigue?</li>
+                </ol>
+                <p>Bien, nos queda agregar nuestros archivos a dicho repositorio. Sin embargo, este paso es totalmente sencillo, primero debemos acceder al directorio (la copia local que hemos agregado en nuestra máquina), y crear un nuevo directorio "Laboratorios/U-2018", desde aquí añadiremos una nueva carpeta que hará referencia al laboratorio, por ejemplo "Laboratorio_#1", y consecutivamente, agregaremos en la misma los archivos correspondientes a dicho laboratorio. Estos archivos son cuatro, un pre-laboratorio, el cual contiene una serie de preguntas que cada alumno debe responder, la parte teórica, que básicamente son los fundamentos teóricos del laboratorio, el post-laboratorio, que representan las actividades o entregables que cada alumno debe realizar para obtener una calificación, y su guía práctica respectiva (lo que está leyendo en este momento).</p>
+                
+                <div class="video">
+                  <video width="70%" height="70%" controls>
+                    <source src="recursos/videos/agregar-archivos-repositorio-git.webm" type="video/webm">
+                    <p>Tu navegador no soporta HTML5. Puedes ver el video desde <a class="enlace" href="recursos/videos/agregar-archivos-repositorio-git.webm">el siguiente enlace</a></p>
+                  </video> 
+                </div>
+              </div>
+            </div>
+            
+            <div id="seccion_add_commit_git">
+              <h2>Add y commit en Git</h2>
+              <div class="contenido-texto">
+                <p>A pesar de que el paso anterior fue sencillo, todavía no hemos agregado los archivos al repositorio remoto, si toman los apuntes teóricos notarán que es necesario agregar estos archivos por medio del comando add, para luego confirmarlos mediante commit. De hecho, si nos ubicamos en el directorio local de nuestro repositorio, y utilizamos el comando git status, ocurrirá lo siguiente:</p>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-status" src="recursos/imagenes/git-status.png"/>
+                </div>
+                <p>Efectivamente, nos encontramos en la rama master (la rama principal del proyecto), pero aún no hemos agregado esos archivos, por eso no presentan ningún seguimiento. Entonces lo siguiente que haremos será agregar dichos archivos por medio del comando git add . (utilizo el . como parámetro de git add para dar a entender que quiero que agregue todos los archivos que se encuentren sin seguimiento desde el directorio local), para luego volver a realizar el comando git status para ver lo que ocurre.</p>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-add" src="recursos/imagenes/git-add.png"/>
+                </div>
+                <p>Por último, nos queda realizar commit con su respectivo mensaje, y una vez que hagamos esto, solo nos quedará <a class="enlace" id="ir_seccion_sincronizar_cambios" href="#">sincronizar los cambios con el repositorio remoto</a>.</p>
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-commit" src="recursos/imagenes/git-commit.png"/>
+                </div>
+              </div>
+            </div>
+            
+            <div id="seccion_sincronizar_cambios">
+              <h2>Sincronizar cambios</h2>
+              <div class="contenido-texto">
+                <p>Localmente sabemos que nuestros archivos ya se encuentran cargados, pero <b><u>NO</u></b> en el repositorio remoto, sino en nuestro directorio de trabajo local. Lo siguiente que realizaremos será la sincronización de nuestros cambios en el repositorio, para ello aplicaremos los comandos base: <b><i>git pull & git push</i></b>. </p>
+
+                <div class="contenido-imagen">
+                  <img class="img-thumbnail" alt="git-push-terminator" src="recursos/imagenes/git-push-terminator.png"/>
+                </div>
+                
+                <p class="nota img-thumbnail"><i><u><b>Nota</b></u>: Al momento de realizar push se nos pedirán los datos referentes a nuestra cuenta, es sencillo, colocamos nuestro nombre de usuario y contraseña (de GitHub por supuesto).</i></p>
+                <p>Después de todos estos pasos, podemos corroborar desde nuestro usuario que efectivamente se ha agregado la información al repositorio </p>
+
+                <div class="video">
+                  <video width="70%" height="70%" controls>
+                    <source src="recursos/videos/verificar-commit-git-hub.webm" type="video/webm">
+                    <p>Tu navegador no soporta HTML5. Puedes ver el video desde <a class="enlace" href="recursos/videos/verificar-commit-git-hub.webm">el siguiente enlace</a></p>
+                  </video> 
+                </div>
+              </div>
+            </div>
+            
+            <div id="seccion_conflictos">
+              <h2>Conflictos</h2>
+              <div class="contenido-texto">
+                <p>Lo último que nos queda por ver es qué ocurre si modifico una sección de un archivo en dos instancias diferentes, y este punto es algo totalmente importante; sin embargo, no es necesario abarcar ese tópico en estos momentos debido a que este primer laboratorio tiene un alcance general, a medida que se comiencen a subir códigos al repositorio y trabajar de manera colaborativa se agregarán nuevas guías que cubran esos aspectos.</p>
+              </div>
+            </div>
+            
+            <div id="seccion_evaluacion">
+              <h2>Evaluación</h2>
+              <div class="contenido-texto">
+                <p>Se debe realizar la entrega de un directorio con la primera inicial de su nombre concatenado con su apellido; por ejemplo, si mi nombre es Víctor Arica, el directorio será asignado como varica. Dicho directorio será incorporado al presente repositorio, y contendrá las respuestas a las preguntas del pre-laboratorio (Laboratorio_#1_Pre-laboratorio.pdf). Adicionalmente, se debe realizar el post-laboratorio, que es básicamente esta evaluación, añadiendo un código sencillo donde se implemente JUnit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Script. -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
